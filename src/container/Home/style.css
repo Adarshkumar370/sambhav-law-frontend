@@ -1,0 +1,16 @@
+.main_title{
+    height: 500px;
+    /* background-color: lightblue; */
+    padding-top: 50px;
+}
+
+.mainBanner{
+    /* background-image: linear-gradient(to right, #7c3186 , #e534a8);
+     */
+     background-color: ;
+     background-image: linear-gradient(to bottom, #FFDFFF , #fff);
+}
+.temp{
+    box-shadow: rgba(0, 0, 0, 0.20) 3px 3px 8px;
+    
+}

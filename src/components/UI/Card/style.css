@@ -1,0 +1,28 @@
+.cardFull{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.cardTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cardText{
+    font-size: 1.1rem;
+}
+.price{
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.oldPrice{
+    text-decoration: line-through;
+    color:gray;
+    font-weight: 400;
+}
+.newPrice{
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #0d6efd ;
+}
+.enrollbtn:hover{
+    color: #0d6efd ;
+}

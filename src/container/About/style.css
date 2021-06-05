@@ -1,0 +1,16 @@
+.paragraph-2{
+    font-size: 1rem;
+    text-align:justify;  
+    text-justify:inter-word;
+}
+.team{
+    border:1px solid black;
+    border-radius: 25px;
+    border-color: black;
+    color: white;
+    background: #000;
+    display: inline;
+    padding: 8px 20px;
+   
+    
+}
