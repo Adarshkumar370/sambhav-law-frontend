@@ -2,8 +2,10 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import SectionPic from "../../assets/balance.jpg";
+import SectionPic from "../../assets/balance.png";
 import Founder1 from "../../assets/founder1.jpg";
+import Founderfather from "../../assets/founder_father.jpg";
+import Foundermother from "../../assets/founder_mother.jpg";
 import "./style.css";
 import Shaila from '../../assets/shaila.png';
 import Ria from '../../assets/ria.png';
@@ -19,8 +21,8 @@ const About = () => {
             md={{ offset: 2, span: 4 }}
           >
             <div>
-              <h1 className='display-5'>What is Sambhav law</h1>
-              <p class="paragraph-2 " >
+              <h1 className='display-5'>What is Sambhav law?</h1>
+              <p class="paragraph-2 mt-3" >
                 Sambhav Law is a premier, multi-platform organization committed
                 to helping students enrich their law school journey and pass
                 different law entrance examinations such as PCS-J, CLAT-UG/PG,
@@ -44,10 +46,34 @@ const About = () => {
             <img
               alt="balance"
               src={SectionPic}
-              className="img-fluid rounded img-thumbnail align-middle "
+              className="img-fluid rounded  align-middle "
+              style={{maxHeight:"400px"}}
             />
           </Col>
         </Row>
+        <Row className="m-2 mt-5">
+          <span className='d-flex justify-content-center'><h5 className=" team">Advisory</h5></span>
+          <h1 className="text-center">Advisory Board</h1>
+          <Col md={{span:4,offset:2}}>
+            <UserCard
+              width="22rem"
+              imgSrc={Founderfather}
+              Title="Anil Kumar Pandey"
+              SubTitle="Advocate"
+              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices. "
+            />
+          </Col>
+          <Col md={{span:4}}>
+            <UserCard
+              width="22rem"
+              imgSrc={Foundermother}
+              Title="Madhu Pandey "
+              SubTitle="Advocate"
+              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices."
+            />
+          </Col>
+        </Row>
+
         <Row className="m-2 mt-5">
           <span className='d-flex justify-content-center'><h5 className=" team">Team</h5></span>
           <h1 className="text-center">Founding Member</h1>
@@ -78,7 +104,7 @@ const About = () => {
             <UserCard
               width="22rem"
               imgSrc={Ria}
-              Title="Ria Ganguly"
+              Title="Riya Ganguly"
               SubTitle="Member"
               Text="An avid law enthusiast; who is inquisitive and keenly interested in legal research and content writing.
               An ardent learner, flexible enough to mould herself as per the current requisites, thereby maintaing the benchmarks of efficiency and effectiveness. Endurance and tenacity, coupled with diligence have helped her propelled towards my quintessential work array. 

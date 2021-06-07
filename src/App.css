@@ -2,3 +2,8 @@ body{
     font-size: 1.3rem;
 
 }
+@media print {
+    .pdf-container {
+      display: none;
+    }
+  }

@@ -1,15 +1,20 @@
 import React from 'react'
-
+import MockDiv from './MockDIv'; 
 const MockSideBar = (props) => {
-
-    const item=props.list;
-   console.log(props.list);
+//    console.log(props.list);
     if(props.list){
         return (
             <>
                {
                    props.list.map((element,index)=>{
-                       return(<span >{index+1}{' '}</span>);
+                       console.log(element);
+                       return(
+                           <MockDiv 
+                           quesNo={index+1}
+                           classNames={element}
+                           key={index}/>
+                           
+                       );
                    })
                    
                }

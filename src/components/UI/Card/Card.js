@@ -1,9 +1,8 @@
 import React from "react";
-import { Card, ListGroupItem, ListGroup, Button } from "react-bootstrap";
+import { Card,  ListGroup, Button } from "react-bootstrap";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { BsFillPersonCheckFill } from "react-icons/bs";
-import yy1 from "../../../assets/sabrimala.jpg";
 const CardCustom = (props) => {
   return (
     <Card style={{ width: "25rem", borderRadius: "15px" }} className="cardFull">
@@ -53,7 +52,7 @@ export const UserCard = (props) => {
           <Card.Img
             src={props.imgSrc}
             style={{ borderRadius: "50%" }}
-            className=" mx-auto d-block w-75 h-75 p-1 m-1"
+            className=" mx-auto d-block w-50  p-1 m-1"
           />
           <Card.Title className="text-center">{props.Title}</Card.Title>
           <Card.Subtitle className="mb-2 text-center text-muted">
@@ -70,9 +69,10 @@ export const UserCard = (props) => {
 export const YoutubeCard = (props) => {
   return (
     <>
+      <a href={props.link} target="_blank" rel='noreferrer'> 
       <Card style={{ border: "none" }} className="w-100">
-        <Card.Img src={yy1} className=" mx-auto d-block w-100" />
-      </Card>
+        <Card.Img src={props.imgSrc} className=" mx-auto d-block w-100" />
+      </Card></a>
     </>
   );
 };

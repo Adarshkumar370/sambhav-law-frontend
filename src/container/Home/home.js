@@ -8,6 +8,15 @@ import Footer from "../../components/Footer/Footer";
 import White_Girl from "../../assets/white_girl.png";
 import Course3 from "../../assets/course_3.png";
 import Course5 from "../../assets/course_5.png";
+import Youtube1 from '../../assets/Youtube_4.png';
+import Youtube2 from '../../assets/Youtube_2.png';
+import Youtube3 from '../../assets/Youtube_1.png';
+import Youtube4 from '../../assets/Youtube_3.png';
+import Youtube5 from '../../assets/Youtube_7.png';
+import Youtube6 from '../../assets/Youtube_5.png';
+import Youtube7 from '../../assets/Youtube_6.png';
+import Youtube8 from '../../assets/Youtube_9.png';
+
 const Home = () => {
   return (
     <>
@@ -61,16 +70,47 @@ const Home = () => {
         </Row>
         <Row>
           <Col>
-            <YoutubeCard />
+            <YoutubeCard
+            imgSrc={Youtube1} 
+            link="https://www.youtube.com/watch?v=Bkoma7IydOE&list=PL4qwMpR723fsyWJYYNKAY_ITuvR12cB53"/>
           </Col>
           <Col>
-            <YoutubeCard />
+            <YoutubeCard
+            imgSrc={Youtube2}
+            link="https://www.youtube.com/watch?v=YNFRZ1Bp6uw&list=PL4qwMpR723fsWLUvgc3xCS6q_hbjto0Sl" />
           </Col>
           <Col>
-            <YoutubeCard />
+            <YoutubeCard
+            imgSrc={Youtube3} 
+            link='https://www.youtube.com/watch?v=Bkoma7IydOE&list=PL4qwMpR723fvk7-f1MAkzznP1HXIo0MF8'/>
           </Col>
           <Col>
-            <YoutubeCard />
+            <YoutubeCard
+            imgSrc={Youtube4}
+            link="https://www.youtube.com/watch?v=ohwEZ7jsX2M&list=PL4qwMpR723fs6KGOIyfpy24a4NtAWQY_E" />
+          </Col>
+          
+        </Row>
+        <Row className="mt-5">
+        <Col>
+            <YoutubeCard
+            imgSrc={Youtube5} 
+            link="https://www.youtube.com/watch?v=hXSnCxlix6M&list=PL4qwMpR723ft6S6bOUdThYUfLl6sUCtiy"/>
+          </Col>
+          <Col>
+            <YoutubeCard
+            imgSrc={Youtube6} 
+            link="https://www.youtube.com/watch?v=jJ9CJZ5rFMY&list=PL4qwMpR723fuOCzKJSW-UAMWYc46fuIYK"/>
+          </Col>
+          <Col>
+            <YoutubeCard
+            imgSrc={Youtube7} 
+            link="https://www.youtube.com/watch?v=-oCidFh6iNA&list=PL4qwMpR723fsYQZPPOouYQTsPx88LRGa2"/>
+          </Col>
+          <Col>
+            <YoutubeCard
+            imgSrc={Youtube8} 
+            link="https://www.youtube.com/watch?v=HolZKQo7F18&list=PL4qwMpR723ft34VDY0JYe82mu3a8QBHLQ"/>
           </Col>
         </Row>
         <br/>

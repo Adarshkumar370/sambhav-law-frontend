@@ -1,11 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import { Form } from "react-bootstrap";
 const Question = (props) => {
+
+const [optionSelected, setOptionSelected] = useState("");
+  const formHandler=() =>{
+
+  }
   return (
     <div>
       <b>Question: {props.quesNo}</b>
       <p>{props.questionText}</p>
-      <Form>
+      <Form onChange={formHandler()}>
         <div key={`default-radio`} className="mb-3">
           <Form.Check
             type="radio"

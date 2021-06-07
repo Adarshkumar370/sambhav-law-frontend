@@ -21,6 +21,7 @@ import Course5 from "./container/Course/Clat/Course5";
 import Notify from './container/Course/Notify';
 import UserProfile from './container/UserProfile/UserProfile';
 import BuyCourse from "./container/BuyCourse/BuyCourse";
+import PDFViewer from './container/Course/PDF/PDFRender';
 function App() {
   
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path='/course/notify-me' component={Notify} />
         <Route path='/temp' component={UserProfile}/>
         <Route path='/buy-course' component={BuyCourse}/>
+        <Route path ='/course/clat/pdf' component={PDFViewer}/>
       </Switch>
     </>
   );

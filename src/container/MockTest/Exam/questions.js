@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchQuestion } from "../../../actions/mockTest.action";
 import MockSideBar from "../../../components/SideBar/MockSideBar";
 
-const Questions = () => { 
+const Questions = () => {
   const mock = useSelector((state) => state.mock);
   const dispatch = useDispatch();
   const [currentQues, setcurrentQues] = useState(0);
@@ -19,19 +19,21 @@ const Questions = () => {
   if (!(mock.loading || mock.questionLoaded)) {
     dispatch(fetchQuestion());
   }
+
   useEffect(() => {
     if (mock.questionLoaded) {
       const questionList = Object.values(mock.docs[0]);
       console.log(questionList[0]);
-
+      var list1 = [];
+      list1.length = parseInt(mock.noOfQuestion, 10);
+      list1 = list1.fill("bg-danger");
       setquesNo(currentQues + 1);
       setquestionText(questionList[currentQues].question);
       setoptionA(questionList[currentQues].optionA);
       setoptionB(questionList[currentQues].optionB);
       setoptionC(questionList[currentQues].optionC);
       setoptionD(questionList[currentQues].optionD);
-      setSideBar(questionList);
-     
+      setSideBar(list1);
     }
   }, [mock.questionLoaded]);
 
@@ -61,10 +63,8 @@ const Questions = () => {
           </Col>
           <Col sm={{ span: 4 }}>
             <Row>Time</Row>
-            <Row>
-              <Col><MockSideBar
-            list={sideBar}
-            /></Col>
+            <Row className='overflow-scroll' style={{maxHeight:'80vh'}}>
+              <MockSideBar list={sideBar} />
             </Row>
           </Col>
         </Row>

@@ -24,3 +24,8 @@ export const notifyConstant={
   NOTIFY_REQUEST:'NOTIFY_REQUEST',
   NOTIFY_ERROR:"NOTIFY_ERROR"
 }
+export const fileConstant={
+  FILE_REQUEST:'FILE_REQUEST',
+  FILE_SUCCESS:'FILE_SUCCESS',
+  FILE_FALIURE:'FILE_FALIURE'
+}
