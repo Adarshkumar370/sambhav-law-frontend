@@ -51,8 +51,8 @@ export const UserCard = (props) => {
         <Card.Body>
           <Card.Img
             src={props.imgSrc}
-            style={{ borderRadius: "50%" }}
-            className=" mx-auto d-block w-50  p-1 m-1"
+            style={{ borderRadius: "50%",width:'300px',height:'300px' }}
+            className=" mx-auto d-block   p-1 m-1"
           />
           <Card.Title className="text-center">{props.Title}</Card.Title>
           <Card.Subtitle className="mb-2 text-center text-muted">
@@ -69,11 +69,25 @@ export const UserCard = (props) => {
 export const YoutubeCard = (props) => {
   return (
     <>
-      <a href={props.link} target="_blank" rel='noreferrer'> 
-      <Card style={{ border: "none" }} className="w-100">
+      <a href={props.link} target="_blank" rel='noreferrer' > 
+      <Card style={{ border: "none",minWidth:'16rem' }} className="w-100">
         <Card.Img src={props.imgSrc} className=" mx-auto d-block w-100" />
       </Card></a>
     </>
   );
 };
+
+export const ResultCard=(props)=>{
+  return(<Card className='m-3' >
+    <Card.Body>
+      <Card.Text>{props.questionNo}: {props.question}</Card.Text>
+      <Card.Text>A:{' '}{props.optionA}</Card.Text>
+      <Card.Text>B: {props.optionB}</Card.Text>
+      <Card.Text>C: {props.optionC}</Card.Text>
+      <Card.Text>D: {props.optionD}</Card.Text>
+      <Card.Text>Correct Ans: {props.correctAns}</Card.Text>
+      <Card.Text>Your Response: {props.response}</Card.Text>
+    </Card.Body>
+  </Card>);
+}
 export default CardCustom;

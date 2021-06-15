@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Col, Container, Row, ListGroupItem } from "react-bootstrap";
+import { Col, Container, Row} from "react-bootstrap";
 import CardCustom from "../../components/UI/Card/Card";
 import Course1 from "../../assets/course_1.png";
 import Course2 from "../../assets/course_2.png";

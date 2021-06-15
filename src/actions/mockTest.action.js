@@ -1,10 +1,10 @@
 import axios from '../helper/axios';
 import {quesConstant} from './constants';
 
-export const fetchQuestion=() =>{
+export const fetchQuestion=(year) =>{
     return async (dispatch)=>{
         dispatch({type:quesConstant.FETCH_QUES_REQUEST});
-        await axios.get("/question/get?testId=CLAT%20LLM%202017")
+        await axios.get(`/question/get?testId=CLAT%20LLM%20${year}`)
         .then((res) => {
           const data = res.data;
           const value = Object.values(data);

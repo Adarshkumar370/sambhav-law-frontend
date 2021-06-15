@@ -11,7 +11,7 @@ const Course3 = () => {
   return (
     <>
       <Header />
-      <Container fluid>
+      <Container fluid className='mt-4'>
         <Row>
           <Col sm={{ span: 3 }} className="">
             <Image
@@ -26,41 +26,41 @@ const Course3 = () => {
             </span>
           </Col>
           <Col>
-            <h5>CLAT</h5>
-            <h1>25 Case Law Summaries + 3 Mock Tests</h1>
-            <p>
-              This package will provide summaries of 75+ Recent Landmark cases
-              that focuses on points important for CLAT PG exam like Related
-              Cases, Key Findings, Relevant Statutes and Amendments.
+            <h6 className="fw-bold">CLAT</h6>
+            <h1 className='mt-3 p-2'>25 Case Law Summaries + 3 Mock Tests</h1>
+            <p className='justify p-2'>
+              This package will provide a combination of 25 Landmark Case Law
+              summaries that focus on the points important for the CLAT exam and
+              3 Extensive Mock Papers based on the current pattern.
             </p>
-            <span>
+            <span className='mt-5 p-2'>
               <b className="price">Price:</b>
               <span className="oldPrice"> ₹999</span>{" "}
               <span className="newPrice">₹699</span>
-              <Button variant="primary" className="m-3 btn-lg ">
+              <Link to='/buy-course'><Button variant="primary" className="m-3 btn-lg ">
                 {" "}
                 Buy Course
-              </Button>
+              </Button></Link>
             </span>{" "}
-            <div>
-              <h2>
-                <u>Course Outline</u>
+            <div  className='mt-5 p-3'>
+              <h2 >
+                <span className='underline'>Course Outline</span>
               </h2>
 
-              <p>
-                Looking at the changes in the pattern of the CLAT PG paper in
-                2020, it is quite certain that you are required to study recent
-                case laws in addition to your foundational subject like
-                Constitution, Adminstrative Law, Jurisprudence etc. The
-                preperation of the paper is made more harder by the fact that
-                the pattern of the paper is now paragraph based, with questions
-                related to that very paragraph. It is thereby essential to
-                change the way the preparation has to be done. Hence to aid you
-                in your endeavour, we have created the CLAT PG 2021 Case Law
-                Digest that provides you with more than 75 comprehensive case
-                law summaries that are based on the recent landmark cases. The
-                summaries emphasize on important points for over which the
-                objctive questions can be formed such as:
+              <p className="justify mt-5">
+                Are you worried about how you would perpare your CLAT PG
+                paper. So many case laws, foundational subjects, a confusing
+                pattern. How do I manage it? Don’t worry as we bring for you the
+                most extensive CLAT PG study package that solves the problem of
+                hunting for important case laws online and thinking twice about
+                buying costly study packages that don’t include mock tests and
+                study materials combined. This study package contains both study
+                material and mock test that will enable extensive preparation at
+                your part at the most effective price. It contains the best of
+                both worlds with with 25 comprehensive case law summaries that
+                are based on the recent landmark cases. The summaries emphasize
+                on important points for over which the objctive questions can be
+                formed such as:
               </p>
 
               <ul>
@@ -71,20 +71,18 @@ const Course3 = () => {
                 <li>Important Theories and Observations</li>
               </ul>
 
-              <p>
-                Our team is hard at work to complete this package study material
-                and we shall be launching it very soon. This study package
-                includes more than 75 case law summaries that means that a
-                minimum of 75 cases will be included with a maximum of 100 cases
-                can be expected.
+              <p className='justify'>
+                Further it also contains more than 3 Mock Tests with each mock
+                test containing 10 passages over which 100 questions are based
+                as according to the CLAT PG 2021 paper format.
               </p>
             </div>
-            <div>
+            <div >
               <h2>
-                <u>Course Syllabus</u>
+                <span className='underline'>Course Syllabus</span>
               </h2>
 
-              <div>
+              <div className='mt-5'>
                 <h3>
                   <b>Arbitration Law</b>
                 </h3>
@@ -92,7 +90,6 @@ const Course3 = () => {
                   name="Hindustan Construction Company vs UOI"
                   description="In this case the constitutional validity of Section 87 of the Arbitration and Conciliation Act challenged in Supreme Court"
                   file="file1"
-                  
                   classes={linkClass}
                 />
                 <DisplayLink

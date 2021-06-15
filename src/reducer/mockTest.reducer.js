@@ -6,6 +6,7 @@ const initState2 = {
   noOfQuestion: null,
   error: null,
   loading: false,
+  response:{}
 };
 
 const MockTestReducer = (state = initState2, action) => {

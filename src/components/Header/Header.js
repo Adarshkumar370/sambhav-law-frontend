@@ -11,6 +11,11 @@ import {
 import Logo from "../../assets/logo.png";
 import "./style.css";
 const Header = (props) => {
+  var temp;
+  if(localStorage.getItem('user'))
+    temp="My Profile";
+    else
+    temp="Login";
   console.log()
   return (
     <>
@@ -35,7 +40,7 @@ const Header = (props) => {
                 <Link to="/carrer" className='text-decoration-none text-reset'>Career</Link>
               </Nav.Link>
               <Nav.Link className="navLinks">
-                <Link to="/signin" className='text-decoration-none text-reset'>{props.login || 'Login'}</Link>
+                <Link to="/signin" className='text-decoration-none text-reset'>{temp}</Link>
               </Nav.Link>
               
               <Nav className="d-flex align-items-center justify-content-evenly">

@@ -1,4 +1,16 @@
 .footer{
-    border: 2px solid black;
-    padding-top: 15px;
+   /* background-color: #DCDCDC; */
+    padding-top: 35px;
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.text-reset{
+    text-decoration: none;
+}
+.justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+br{
+    margin: 8px;
 }

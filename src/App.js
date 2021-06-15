@@ -22,6 +22,7 @@ import Notify from './container/Course/Notify';
 import UserProfile from './container/UserProfile/UserProfile';
 import BuyCourse from "./container/BuyCourse/BuyCourse";
 import PDFViewer from './container/Course/PDF/PDFRender';
+import Previous from "./container/MockTest/CLAT/Previous";
 function App() {
   
   return (
@@ -42,17 +43,18 @@ function App() {
         <Route path='/mock-test' exact component={MockTest}/>
         <Route path='/course' exact component={Course}/>
         <Route path='/mock-test/instructions' component={Instructions}/>
-        <Route path='/mock-test/questions' component={Questions}/>
-        <Route path='/mock-test/submit' component={Submit}/>
+        <Route path='/mock-test/questions/:handle' component={Questions}/>
+        <Route path='/mock-test/result' component={Submit}/>
         <Route path='/course/clat/course-1' component={Course1}/>
         <Route path='/course/clat/course-2' component={Course2}/>
         <Route path='/course/clat/course-3' component={Course3}/>
         <Route path='/course/clat/course-4' component={Course4}/>
         <Route path='/course/clat/course-5' component={Course5}/>
         <Route path='/course/notify-me' component={Notify} />
-        <Route path='/temp' component={UserProfile}/>
+        <Route path='/profile' component={UserProfile}/>
         <Route path='/buy-course' component={BuyCourse}/>
         <Route path ='/course/clat/pdf' component={PDFViewer}/>
+        <Route path ='/mock/previous' component={Previous}/>
       </Switch>
     </>
   );

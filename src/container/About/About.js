@@ -7,8 +7,9 @@ import Founder1 from "../../assets/founder1.jpg";
 import Founderfather from "../../assets/founder_father.jpg";
 import Foundermother from "../../assets/founder_mother.jpg";
 import "./style.css";
-import Shaila from '../../assets/shaila.png';
-import Ria from '../../assets/ria.png';
+import Shaila from "../../assets/shaila.png";
+import Karina from "../../assets/Karina.jpg";
+import Ria from "../../assets/ria.png";
 import { UserCard } from "../../components/UI/Card/Card";
 const About = () => {
   return (
@@ -21,8 +22,8 @@ const About = () => {
             md={{ offset: 2, span: 4 }}
           >
             <div>
-              <h1 className='display-5'>What is Sambhav law?</h1>
-              <p class="paragraph-2 mt-3" >
+              <h1 className="display-5">What is Sambhav law?</h1>
+              <p class="paragraph-2 mt-3">
                 Sambhav Law is a premier, multi-platform organization committed
                 to helping students enrich their law school journey and pass
                 different law entrance examinations such as PCS-J, CLAT-UG/PG,
@@ -47,14 +48,16 @@ const About = () => {
               alt="balance"
               src={SectionPic}
               className="img-fluid rounded  align-middle "
-              style={{maxHeight:"400px"}}
+              style={{ maxHeight: "400px" }}
             />
           </Col>
         </Row>
         <Row className="m-2 mt-5">
-          <span className='d-flex justify-content-center'><h5 className=" team">Advisory</h5></span>
+          <span className="d-flex justify-content-center">
+            <h5 className=" team">Advisory</h5>
+          </span>
           <h1 className="text-center">Advisory Board</h1>
-          <Col md={{span:4,offset:2}}>
+          <Col md={{ span: 4, offset: 2 }}>
             <UserCard
               width="22rem"
               imgSrc={Founderfather}
@@ -63,7 +66,7 @@ const About = () => {
               Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices. "
             />
           </Col>
-          <Col md={{span:4}}>
+          <Col md={{ span: 4 }}>
             <UserCard
               width="22rem"
               imgSrc={Foundermother}
@@ -75,9 +78,11 @@ const About = () => {
         </Row>
 
         <Row className="m-2 mt-5">
-          <span className='d-flex justify-content-center'><h5 className=" team">Team</h5></span>
+          <span className="d-flex justify-content-center">
+            <h5 className=" team">Team</h5>
+          </span>
           <h1 className="text-center">Founding Member</h1>
-          <Col md={{span:4,offset:2}}>
+          <Col md={{ span: 4, offset: 2 }}>
             <UserCard
               width="22rem"
               imgSrc={Founder1}
@@ -86,7 +91,7 @@ const About = () => {
               Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices. "
             />
           </Col>
-          <Col md={{span:4}}>
+          <Col md={{ span: 4 }}>
             <UserCard
               width="22rem"
               imgSrc={Shaila}
@@ -98,9 +103,11 @@ const About = () => {
         </Row>
 
         <Row className="mt-5">
-        <span className='d-flex justify-content-center'><h5 className=" team">Team</h5></span>
+          <span className="d-flex justify-content-center">
+            <h5 className=" team">Team</h5>
+          </span>
           <h1 className="text-center">Our Team</h1>
-          <Col sm={{span:4,offset:4}}>
+          <Col sm={{ span: 4, offset: 2 }}>
             <UserCard
               width="22rem"
               imgSrc={Ria}
@@ -112,11 +119,19 @@ const About = () => {
               Open to opportunities!"
             />
           </Col>
-          
+          <Col sm={{ span: 4 }}>
+            <UserCard
+              width="22rem"
+              imgSrc={Karina}
+              Title="Karina Manaf"
+              SubTitle="Member"
+              Text="Karina is a 4th year BBALLB student of Kristu Jayanti College of Law, Bangalore with experience in drafting, mediation and legal research. She is particularly interested in the areas of Intellectual Property Rights, Tax laws and Contracts and aims to work in these fields. Moreover, she is an avid believer that everybody is presumed innocent, until proven guilty, no matter what the charge is."
+            />
+          </Col>
         </Row>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
       </Container>
       <Footer />
     </>

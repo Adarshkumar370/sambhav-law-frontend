@@ -16,8 +16,11 @@ const Signin = () => {
 
   useEffect(() => {
   
-      setError(auth.error);
+      if(auth.error){
+        setError(auth.error);
       console.log("error");
+      }
+      
     
   }, [auth.error]);
 
@@ -30,6 +33,9 @@ const Signin = () => {
     dispatch(Login(user));
     console.log(auth.error);
   };
+  if(localStorage.getItem('user')){
+    return( <Redirect to={"/profile"} />);
+   }
   return (
     <>
       <Header />
