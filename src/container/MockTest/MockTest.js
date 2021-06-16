@@ -15,7 +15,7 @@ const MockTest = () => {
           <Col>
             <CardCustom
               cardPic={Course4}
-              cardTitle="10+ Mock Tests"
+              cardTitle="10 Mock Tests"
               cardText="This package will provide 10+ Extensive Mock Papers based on the current Pattern of CLAT PG focusing on important paragraphs from recent landmark cases."
               originalPrice="₹1099"
               newPrice="₹599"

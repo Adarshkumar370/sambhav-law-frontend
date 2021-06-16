@@ -298,7 +298,7 @@ const Course3 = () => {
                 />
                 <DisplayLink
                   name="Mukesh Kumar vs State of Uttarakhand "
-                  description=""
+                  description="In this case, the Supreme Court held the vacancies not to be filled by state governments, according to SCs, STs and OBCs reservations laws and declined to order the Uttarakhand state government to give public workers preference while filling vacancies."
                   file="file25"
                   classes={linkClass}
                 />

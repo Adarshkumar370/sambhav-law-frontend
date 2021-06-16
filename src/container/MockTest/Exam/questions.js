@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Col, Container, Row, Button, Form } from "react-bootstrap";
+import { Col, Container, Row, Button, Form, Alert } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchQuestion } from "../../../actions/mockTest.action";
 import { useParams } from "react-router-dom";
@@ -16,13 +16,18 @@ const Questions = () => {
   const [optionC, setoptionC] = useState("");
   const [optionD, setoptionD] = useState("");
   const [sideBar, setSideBar] = useState(" ");
-  const [score, setScore] = useState(0.0);
+
   const [formKey, setFormKey] = useState(0);
   const [sideKey, setSideKey] = useState(0);
-
+  const [opA, setopA] = useState(false);
+  const [opB, setopB] = useState(false);
+  const [opC, setopC] = useState(false);
+  const [opD, setopD] = useState(false);
+  const [error, setError] = useState(null);
   const questionList = useRef();
   const sideList = useRef();
-
+  const score = useRef(parseFloat(0, 10));
+  var optionSelected = null;
   const dispatch = useDispatch(); // Loading Questions
   if (!(mock.loading || mock.questionLoaded)) {
     localStorage.removeItem("score");
@@ -51,67 +56,90 @@ const Questions = () => {
       setoptionB(questionList.current[currentQues].optionB);
       setoptionC(questionList.current[currentQues].optionC);
       setoptionD(questionList.current[currentQues].optionD);
+      setopA(null);
+      setopB(null);
+      setopC(null);
+      setopD(null);
+      setError(null);
+      if (!mock.response[currentQues]) {
+        sideList.current[currentQues] = "bg-danger";
+      }
     }
   }, [mock.questionLoaded, currentQues]);
 
   const formHandler = (e) => {
-    if (e.target.value) mock.response[currentQues] = e.target.value;  
-  };      // recording the option selected 
+    if (e.target.value) optionSelected = e.target.value;
+  }; // recording the option selected
+
+  const sideBarClickHandler = (e) => {
+    setcurrentQues(parseInt(e.target.textContent, 10) - 1);
+    setFormKey(formKey + 1);
+  };
+  useEffect(() => {
+    switch (mock.response[currentQues]) {
+      case "A":
+        setopA("text-primary bg-light border border-dark border-3");
+        break;
+      case "B":
+        setopB("text-primary bg-light border border-dark border-3");
+        break;
+      case "C":
+        setopC("text-primary bg-light border border-dark border-3");
+        break;
+      case "D":
+        setopD("text-primary bg-light border border-dark border-3");
+        break;
+      default:
+        console.log("default ");
+    }
+  }, [formKey]);
 
   const buttonClickHandler = (e) => {
     e.preventDefault();
+
+    switch (e.target.value) {
+      case "mark":
+        sideList.current[currentQues] = "bg-warning";
+        if (optionSelected) {
+          mock.response[currentQues] = optionSelected;
+        }
+        setcurrentQues(parseInt(currentQues, 10) + 1);
+        setFormKey(formKey + 1);
+        break;
+      case "clear":
+        sideList.current[currentQues] = "bg-danger";
+        mock.response[currentQues] = null;
+        setopA(null);
+        setopB(null);
+        setopC(null);
+        setopD(null);
+        break;
+      case "save":
+        if (optionSelected) {
+          mock.response[currentQues] = optionSelected;
+          
+          sideList.current[currentQues] = "bg-primary";
+        }
+          setcurrentQues(parseInt(currentQues, 10) + 1);
+          setFormKey(formKey + 1);
+        break;
+      case "submit":
+        Object.entries(mock.response).forEach(([key, value]) => {
+          if (value === questionList.current[key].correctAns)
+            score.current = parseFloat(score.current, 10) + 1;
+          else score.current = parseFloat(score.current, 10) - 0.25;
+        });
+        console.log(score.current);
+        localStorage.setItem("score", score.current);
+        localStorage.setItem("responseSheet", JSON.stringify(mock.response));
+        window.location.href = "/mock-test/result";
+        break;
+      default:
+        console.log("default");
+    }
+
     setSideKey(sideKey + 1);
-    if (e.target.value === "mark") {
-      sideList.current[currentQues] = "bg-warning";
-      console.log("sideList.current[currentQues]");
-      setSideKey(sideKey + 1);
-      if (mock.response[currentQues]) {
-        if (
-          mock.response[currentQues] ===
-          questionList.current[currentQues].correctAns
-        )
-          setScore(score + 1);
-        else setScore(score - 0.25);
-      }
-      setcurrentQues(parseInt(currentQues, 10) + 1);
-      setFormKey(formKey + 1);
-    }
-    if (e.target.value === "clear") {
-      sideList.current[currentQues] = "bg-light";
-      console.log("sideList.current[currentQues]");
-      setSideKey(sideKey + 1);
-      setFormKey(formKey + 1);
-      mock.response[currentQues] = "";
-      console.log("Clear");
-    }
-    if (e.target.value === "save") {
-      if (mock.response[currentQues]) {
-        sideList.current[currentQues] = "bg-primary";
-        console.log("sideList.current[currentQues]");
-        setSideKey(sideKey + 1);
-        if (
-          mock.response[currentQues] ===
-          questionList.current[currentQues].correctAns
-        )
-          setScore(score + 1);
-        else setScore(score - 0.25);
-      }
-      console.log(score);
-      setcurrentQues(parseInt(currentQues, 10) + 1);
-      setFormKey(formKey + 1);
-    }
-    if (e.target.value === "submit") {
-      localStorage.setItem("score", score);
-      localStorage.setItem("responseSheet", JSON.stringify(mock.response));
-      setFormKey(-1);
-
-      window.location.href = "/mock-test/result";
-    }
   };
-  const sideBarClickHandler = (e) => {
-    setcurrentQues(parseInt(e.target.textContent, 10) - 1);
-  };
-
   return (
     <>
       <Container
@@ -137,24 +165,28 @@ const Questions = () => {
                       name="QuestionOption"
                       label={optionA}
                       value="A"
+                      className={opA}
                     />
                     <Form.Check
                       type="radio"
                       name="QuestionOption"
                       label={optionB}
                       value="B"
+                      className={opB}
                     />
                     <Form.Check
                       type="radio"
                       name="QuestionOption"
                       label={optionC}
                       value="C"
+                      className={opC}
                     />
                     <Form.Check
                       type="radio"
                       name="QuestionOption"
                       label={optionD}
                       value="D"
+                      className={opD}
                     />
                   </div>
                   <Col
@@ -173,6 +205,7 @@ const Questions = () => {
                       value="clear"
                       onClick={buttonClickHandler}
                       variant="danger"
+                      className='text-dark'
                     >
                       Clear Response
                     </Button>
@@ -180,6 +213,7 @@ const Questions = () => {
                       value="save"
                       onClick={buttonClickHandler}
                       variant="primary"
+                      className='text-dark'
                     >
                       Save & Next
                     </Button>
@@ -187,6 +221,7 @@ const Questions = () => {
                       value="submit"
                       onClick={buttonClickHandler}
                       Variant="primary"
+                      className='text-dark'
                     >
                       Submit Paper
                     </Button>
@@ -194,6 +229,7 @@ const Questions = () => {
                 </Form>
               </div>
             </Row>
+            <p className=" bg-danger m-3 text-center">{error}</p>
           </Col>
           <Col sm={{ span: 4 }}>
             <Row>Time:</Row>
