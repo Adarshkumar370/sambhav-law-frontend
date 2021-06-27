@@ -12,7 +12,7 @@ const Carrer = () => {
     return (
        <>
        <Header />
-        <Container fluid>
+        <Container  className='mt-3 m-2 mx-auto min-vh-100'>
             <Row>
                 <Col><h1 className="display-5 text-center">Apply For Internship</h1></Col>
             </Row>
@@ -25,35 +25,35 @@ const Carrer = () => {
                     value={name}
                     type='text'
                     onChange={(e) => setName(e.target.value)}
-                    /><br/>
+                    />
                     <Input
                     label="Email"
                     placeholder="Email"
                     value={email}
                     type='email'
                     onChange={(e) => setEmail(e.target.value)}
-                    /><br/>
+                    />
                     <Input
                     label="Mobile Number"
                     placeholder="Mobile Number "
                     value={mobileNo}
                     type='text'
                     onChange={(e) => setMobileNo(e.target.value)}
-                    /><br/>
+                    />
                     <Input
                     label="Preferred Date to Join"
                     placeholder="Preferred Date to Join"
                     value={join}
                     type='date'
                     onChange={(e) => setJoin(e.target.value)}
-                    /><br/>
+                    />
                     <Input
                     label=  "Upload your CV:  &nbsp; &nbsp; &nbsp;"
                     value={CV}
                     type='file'
                     onChange={(e) => setCV(e.target.value)}
-                    /><br/>
-                    <Button variant="primary" size="lg" type="submit">
+                    />
+                    <Button className='w-100 mt-3' variant="primary" size="lg" type="submit">
                   Submit
                 </Button>
                 </Form>

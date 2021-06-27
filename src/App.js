@@ -23,6 +23,7 @@ import UserProfile from './container/UserProfile/UserProfile';
 import BuyCourse from "./container/BuyCourse/BuyCourse";
 import PDFViewer from './container/Course/PDF/PDFRender';
 import Previous from "./container/MockTest/CLAT/Previous";
+import HTMLRender from "./container/Course/HTML/HTMLRender";
 function App() {
   
   return (
@@ -52,9 +53,10 @@ function App() {
         <Route path='/course/clat/course-5' component={Course5}/>
         <Route path='/course/notify-me' component={Notify} />
         <Route path='/profile' component={UserProfile}/>
-        <Route path='/buy-course' component={BuyCourse}/>
+        <Route path='/buy-course/:handle' component={BuyCourse}/>
         <Route path ='/course/clat/pdf' component={PDFViewer}/>
         <Route path ='/mock/previous' component={Previous}/>
+        <Route path='/mock/:handle' component={HTMLRender}/>
       </Switch>
     </>
   );

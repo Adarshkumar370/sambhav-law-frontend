@@ -5,9 +5,8 @@ const DisplayLink = (props) => {
   const clickHandler = () => {
     localStorage.setItem("pdfLink", props.file);
   };
-  console.log(props.file);
   return (
-    <p className="justify">
+    <p className="justify"><span>{props.Num} </span>
       <Link
         className={props.classes}
         onClick={clickHandler}

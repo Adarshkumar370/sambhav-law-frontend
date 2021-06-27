@@ -41,8 +41,7 @@ const Notify = () => {
               type="email"
               onChange={(e) => setEmail(e.target.value)}
             />
-            <br />
-            <Button variant="primary" size="lg" type="submit">
+            <Button variant="primary" className='w-50 mt-4' size="lg" type="submit">
               Submit
             </Button>
             <p>{error}</p>

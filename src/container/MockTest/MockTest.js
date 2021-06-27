@@ -3,27 +3,31 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import CardCustom from "../../components/UI/Card/Card";
-import Course4 from "../../assets/course_4.png";
+import Course2 from "../../assets/course_2.jpg";
 import MockPrevious from "../../assets/mock_previous.png";
+import Course5 from "../../assets/course_5.jpg";
 const MockTest = () => {
   return (
     <>
       <Header />
-      <Container>
-        <Row>
-          <h1>Mock courses </h1>
-          <Col>
+      <Container fluid className="min-vh-100">
+        <Row className="mt-3">
+          <h1 className="display-5 fw-bold m-2 p-2">Mock courses </h1>
+          <hr />
+        </Row>
+        <Row className='mt-3 g-5 m-2"'>
+          <Col xs={12} sm={12} md={6} lg={6} xl={3}>
             <CardCustom
-              cardPic={Course4}
-              cardTitle="10 Mock Tests"
-              cardText="This package will provide 10+ Extensive Mock Papers based on the current Pattern of CLAT PG focusing on important paragraphs from recent landmark cases."
-              originalPrice="₹1099"
-              newPrice="₹599"
-              link="/course/notify-me"
-              currentStatus="Notify Me"
+              cardPic={Course2}
+              cardTitle="5 Mock Tests (Practice Series 1) "
+              cardText="This package provides 5 Extensive Mock Papers based on the latest pattern with each mock test containing 120 question based over 12 passages. These are mock papers are meant for self assessment and the answer key has been provided after every 10 questions."
+              originalPrice="₹699"
+              newPrice="₹449"
+              link="/course/clat/course-2"
+              currentStatus="Enroll Now"
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={6} lg={6} xl={3}>
             <CardCustom
               cardPic={MockPrevious}
               cardTitle="Previous Year CLAT PG Papers"
@@ -33,8 +37,19 @@ const MockTest = () => {
               currentStatus="Enroll Now"
             />
           </Col>
+          <Col>
+            <CardCustom
+              cardPic={Course5}
+              cardTitle="All India Mock Test Series (6 Mock Papers) "
+              cardText="This mock test series is based upon ALL INDIA CONSOLIDATED RANKING SYSTEM that lets the participants receive a Consolidated Rank after averaging out their marks in each mock paper. They shall also receive a separate Rank for each individual mock paper as well."
+              newPrice="₹399"
+              link="/course/clat/course-5"
+              currentStatus="Enroll Now"
+              className="mh-100"
+            />
+          </Col>
         </Row>
-      </Container>
+      </Container><br/><br/><br/>
       <Footer />
     </>
   );

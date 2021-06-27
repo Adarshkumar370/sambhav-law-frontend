@@ -9,7 +9,7 @@ export const fetchCourse = () => {
       .then((res) => {
         const data = res.data;
         const value = Object.values(data);
-        console.log(value);
+        console.log(data);
         dispatch({
           type: courseConstant.COURSE_FETCH_SUCCESS,
           payload: {
@@ -25,3 +25,8 @@ export const fetchCourse = () => {
       });
   };
 };
+export const placeOrder=()=>{
+  return async (dispatch)=>{
+    
+  }
+}

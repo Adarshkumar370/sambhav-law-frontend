@@ -6,7 +6,7 @@ import Footer from "../../../components/Footer/Footer";
 import signup from "../../../actions/user.actions";
 import Input from "../../../components/UI/Input/Input";
 import { useSelector, useDispatch } from "react-redux";
-
+import './style.css';
 const Signup = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -38,8 +38,8 @@ const Signup = () => {
     <>
       <Header />
       <Container>
-        <Card style={{ width: "35rem" }} className="m-3 p-2 mx-auto">
-        <h1 class="display-6 text-center">Registration Form</h1>
+        <Card style={{ width: "40rem" }} className="m-3 p-2 shadow-c mx-auto border border-1 border-dark mt-5 mb-5">
+        <h1 class="display-6 fw-bold m-2">Registration Form</h1>
           <Card.Body>
             
             <Card.Text>
@@ -50,47 +50,47 @@ const Signup = () => {
                   value={firstName}
                   type="text"
                   onChange={(e) => setFirstName(e.target.value)}
-                /><br/>
+                />
                 <Input
                   label="Last Name"
                   placeholder="Last Name"
                   value={lastName}
                   type="text"
                   onChange={(e) => setLastName(e.target.value)}
-                /><br/>
+                />
                 <Input
                   label="Email"
                   placeholder="Email"
                   value={email}
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
-                /><br/>
+                />
                 <Input
                   label="Password"
                   placeholder="Password"
                   value={password}
                   type="password"
                   onChange={(e) => setPassword(e.target.value)}
-                /><br/>
+                />
                 <Input
                   label="Mobile Number"
                   placeholder="Mobile Number"
                   value={mobileNumber}
                   type="text"
                   onChange={(e) => setMobileNumber(e.target.value)}
-                /><br/>
+                />
                 <Input
                   label="College Name"
                   placeholder="College Name"
                   value={collegeName}
                   type="text"
                   onChange={(e) => setCollegeName(e.target.value)}
-                /><br/>
+                />
                 <p>{error}</p>
                 <Button size="lg"
                   variant="primary"
                   type="submit"
-                  className="d-block mt-3"
+                  className="w-100 mt-3"
                 >
                   Register
                 </Button>

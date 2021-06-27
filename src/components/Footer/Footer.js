@@ -1,14 +1,26 @@
-import { Button } from "bootstrap";
-import React, { useLayoutEffect } from "react";
+import { Button } from "react-bootstrap";
+import React, { useLayoutEffect, useState} from "react";
 import { Container, Row, Col, Image, Form } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import Input from "../../components/UI/Input/Input";
 import "./style.css";
+import {  useDispatch } from "react-redux";
+import { submitFeedBack } from "../../actions/feedback.actions";
 const Footer = () => {
-    useLayoutEffect(() => {
-      window.scrollTo(0, 0)
-  });
+  //   useLayoutEffect(() => {
+  //     window.scrollTo(0, 0)
+  // });
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const feedbackForm=(e)=>{
+    e.preventDefault();
+    const feedback={name,email,subject,message};
+    dispatch(submitFeedBack(feedback));
+  }
   return (
     <>
       <Container fluid className="footer">
@@ -50,28 +62,28 @@ const Footer = () => {
               <b>Phone:</b> +91-9555896908
             </p>
             <p>
-              <b>Email: </b>thesambhavlaw@gmail.com
+              <b>Email: </b>inquirysambhavlaw@gmail.com
             </p>
           </Col>
           <Col md={{ span: 3, offset: 0 }}>
             <h3 className='fw-bold fs-4 text-uppercase'>Get in touch with us</h3>
-            <Form className="p-2">
+            <Form className="p-2" onSubmit={feedbackForm}>
               <p>
                 Your Email address will not publish required field are marked
               </p>
-              <Input placeholder="Name *" value="" type="text" />
-              <Input placeholder="Email *" value="" type="text" />
-              <Input placeholder="Subject" value="" type="text" />
+              <Input placeholder="Name *" value={name} onChange={(e) => setName(e.target.value)} type="text" />
+              <Input placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)} type="text" />
+              <Input placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} type="text" />
               <br />
               <textarea
                 className="form-control"
                 row="3"
                 placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-              {/* <Button variant="primary" type="submit">
-                Submit
-              </Button> */}
-              <Input type="submit" />
+              <Button variant="dark" type='submit' size="lg" className='w-100 mt-3'>Submit</Button>
+              
             </Form>
           </Col>
           <hr className='mt-5'/>

@@ -5,7 +5,11 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Input from "../../components/UI/Input/Input";
 import { Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 const BuyCourse = () => {
+  const [courseTitle, setCourseTitle] = useState("");
+  const [coursePrice, setCoursePrice] = useState("");
+  const { handle } = useParams();
   const order = useSelector((state) => state.order);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -23,7 +27,30 @@ const BuyCourse = () => {
     setError(order.error);
     console.log("error");
   }, [order.error]);
-
+useEffect(()=>{
+  switch(handle){
+    case "course1":{
+        console.log("Course 1");
+        setCourseTitle("25 Comprehensive Case Law Summaries");
+        setCoursePrice("₹299");
+      break;
+    }
+    case "course2":{
+      console.log("Course 2");
+      setCourseTitle("5 Mock Tests ");
+      setCoursePrice("₹359");
+    break;
+  }
+  case "course3":{
+    console.log("Course 3");
+    setCourseTitle("25 Case Law Summaries + 5 Mock Tests");
+    setCoursePrice("₹499");
+  break;
+}
+    default:
+      console.log('default');
+  }
+})
   const buyCourse = (e) => {
     e.preventDefault();
     const orderdetail = {
@@ -40,7 +67,7 @@ const BuyCourse = () => {
     };
     dispatch();
   };
-
+ 
   return (
     <>
       <Header />
@@ -101,13 +128,16 @@ const BuyCourse = () => {
               <Input
                 label="Pincode"
                 placeholder=" Pincode"
-                type="text"
-                onChange={(e) => setFirstName(e.target.value)}
+                type="Number"
+                value={pincode}
+                onChange={(e) => setPincode(e.target.value)}
               />
               <Button value="submit">Submit</Button>
             </Form>
           </Col>
-          <Col></Col>
+          <Col> Course
+          <h3>{courseTitle}</h3>
+          <h4>{coursePrice}</h4></Col>
         </Row>
       </Container>
       <Footer />

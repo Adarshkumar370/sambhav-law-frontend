@@ -7,6 +7,7 @@ import Input from "../../../components/UI/Input/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import { Login } from "../../../actions/auth.actions";
+import './style.css';
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,9 +40,9 @@ const Signin = () => {
   return (
     <>
       <Header />
-      <Container>
-        <Card style={{ width: "35rem" }} className="m-3 p-2 mx-auto">
-          <h1 class="display-6 text-center">Login To Sambhav Law</h1>
+      <Container className='min-vh-100 mt-5'>
+        <Card style={{ width: "35rem" }} className="m-3 p-2 mx-auto position-absolute top-50 start-50 translate-middle border border-dark border-1 shadow-c ">
+          <h1 class="display-6 m-3 fw-bold">Login</h1>
           <Card.Body>
             <Card.Text>
               
@@ -53,7 +54,6 @@ const Signin = () => {
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <br />
                 <Input
                   label="Password"
                   placeholder="Password"
@@ -62,7 +62,7 @@ const Signin = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <br />
-                <Button variant="primary" size="lg" type="submit">
+                <Button variant="primary" className='w-100' size="lg" type="submit">
                   Submit
                 </Button>
               </Form>

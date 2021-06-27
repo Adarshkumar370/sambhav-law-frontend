@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 const CardCustom = (props) => {
   return (
-    <Card style={{ width: "25rem", borderRadius: "15px" }} className="cardFull">
+    <Card style={{ width: "25rem", borderRadius: "15px",height:'38rem' }} className="cardFull mh-100">
       <Card.Img
         style={{ borderRadius: "15px 15px 0px 0px" }}
         variant="top"
         src={props.cardPic}
       />
-      <Card.Body>
+      <Card.Body style={{height:'17rem'}}>
         <Card.Title className="cardTitle">{props.cardTitle}</Card.Title>
         <Card.Text className="cardText">{props.cardText}</Card.Text>
       </Card.Body>
@@ -19,7 +19,7 @@ const CardCustom = (props) => {
         {/* <ListGroupItem>Cras justo odio</ListGroupItem> */}
         {props.listGroupItems}
       </ListGroup>
-      <Card.Body>
+      <Card.Body >
         {/* <span>{props.cardPrice}</span> */}
         <span>
           <b className="price">Price:</b>
@@ -71,7 +71,7 @@ export const YoutubeCard = (props) => {
     <>
       <a href={props.link} target="_blank" rel='noreferrer' > 
       <Card style={{ border: "none",minWidth:'16rem' }} className="w-100">
-        <Card.Img src={props.imgSrc} className=" mx-auto d-block w-100" />
+        <Card.Img src={props.imgSrc} className="img-fluid mx-auto d-block w-100" />
       </Card></a>
     </>
   );

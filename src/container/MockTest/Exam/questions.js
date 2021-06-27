@@ -29,6 +29,7 @@ const Questions = () => {
   const score = useRef(parseFloat(0, 10));
   var optionSelected = null;
   const dispatch = useDispatch(); // Loading Questions
+ useEffect(()=>{
   if (!(mock.loading || mock.questionLoaded)) {
     localStorage.removeItem("score");
     localStorage.removeItem("responseSheet");
@@ -36,6 +37,7 @@ const Questions = () => {
     dispatch(fetchQuestion(handle));
   }
 
+ },[mock.loading])
   useEffect(() => {
     if (mock.questionLoaded) {
       questionList.current = Object.values(mock.docs[0]);

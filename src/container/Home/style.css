@@ -7,10 +7,14 @@
 .mainBanner{
     /* background-image: linear-gradient(to right, #7c3186 , #e534a8);
      */
-     background-color: ;
+     background-color: white;
      background-image: linear-gradient(to bottom, #FFDFFF , #fff);
 }
 .temp{
     box-shadow: rgba(0, 0, 0, 0.20) 3px 3px 8px;
     
+}
+
+.green{
+    color:green;
 }

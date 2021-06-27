@@ -11,6 +11,7 @@ import Shaila from "../../assets/shaila.png";
 import Karina from "../../assets/Karina.jpg";
 import Ria from "../../assets/ria.png";
 import { UserCard } from "../../components/UI/Card/Card";
+import Vidisha from "../../assets/Vidisha.jpg";
 const About = () => {
   return (
     <>
@@ -63,7 +64,7 @@ const About = () => {
               imgSrc={Founderfather}
               Title="Anil Kumar Pandey"
               SubTitle="Advocate"
-              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices. "
+              Text="Anil Kumar Pandey is a panel for various banking organizations  including State Bank of India, Punjab National Bank and Oriental Bank of Commerce with 30+ years of practice in multiple fields of law including Criminal Law, Banking Law, Tax Law and Civil Matters including Property Disputes. He has represented his clients before various judicial forums including various High Courts, Civil Courts, Debt Recovery Tribunal, State Consumer Forum and Real Estate Appellate Tribunal."
             />
           </Col>
           <Col md={{ span: 4 }}>
@@ -72,7 +73,7 @@ const About = () => {
               imgSrc={Foundermother}
               Title="Madhu Pandey "
               SubTitle="Advocate"
-              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices."
+              Text="Madhu Pandey is a Panel Lawyer in various Banking Organizations like Punjab National Bank, Axis Bank and Oriental Bank of Commerce with specialization in Civil Matters including Property Disputes, Title Search, matters under NI Act and Banking matters including cases under SARFAESI Act. With more than 30+ years of experience, she has represented her clients before various judicial forums including various High Courts, Civil Courts and Statutory Tribunals."
             />
           </Col>
         </Row>
@@ -87,8 +88,8 @@ const About = () => {
               width="22rem"
               imgSrc={Founder1}
               Title="Tejas Pandey"
-              SubTitle="Co Founder"
-              Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus porta dolor in placerat. Donec fermentum facilisis dolor, ac commodo mauris tincidunt ut. Sed ultrices. "
+              SubTitle="Founder"
+              Text="Tejas Pandey is the Founder and Chief Creative Head of Sambhav Law Legal E-Learning Platform. He is also a practicing lawyer at Allahabad High Court, Lucknow Bench, with a practice in Civil and Service Matter Disputes. He very passionate about his work and believes in having a strong work ethic. He help out other individuals in pursuit of their career goals, which is also one the chief reasons for the creation of this organization. His area of interests are Constitutional Law, Banking law, Administrative Law."
             />
           </Col>
           <Col md={{ span: 4 }}>
@@ -107,7 +108,26 @@ const About = () => {
             <h5 className=" team">Team</h5>
           </span>
           <h1 className="text-center">Our Team</h1>
-          <Col sm={{ span: 4, offset: 2 }}>
+          <Col >
+            <UserCard
+              width="22rem"
+              imgSrc={Karina}
+              Title="Karina Manaf"
+              SubTitle="Member"
+              Text="Karina is a 4th year BBALLB student of Kristu Jayanti College of Law, Bangalore with experience in drafting, mediation and legal research. She is particularly interested in the areas of Intellectual Property Rights, Tax laws and Contracts and aims to work in these fields. Moreover, she is an avid believer that everybody is presumed innocent, until proven guilty, no matter what the charge is."
+            />
+          </Col>
+          <Col >
+            <UserCard
+              width="22rem"
+              imgSrc={Vidisha}
+              Title="Vidisha Mishra"
+              SubTitle="Member"
+              Text="
+              Vidisha is a 3rd year law student of KIIT School of Law, Odisha. She has a keen interest in the areas of Constitutional Law and Company Law and aspires to become a Company Secretary."
+            />
+          </Col>
+          <Col >
             <UserCard
               width="22rem"
               imgSrc={Ria}
@@ -117,15 +137,6 @@ const About = () => {
               An ardent learner, flexible enough to mould herself as per the current requisites, thereby maintaing the benchmarks of efficiency and effectiveness. Endurance and tenacity, coupled with diligence have helped her propelled towards my quintessential work array. 
               
               Open to opportunities!"
-            />
-          </Col>
-          <Col sm={{ span: 4 }}>
-            <UserCard
-              width="22rem"
-              imgSrc={Karina}
-              Title="Karina Manaf"
-              SubTitle="Member"
-              Text="Karina is a 4th year BBALLB student of Kristu Jayanti College of Law, Bangalore with experience in drafting, mediation and legal research. She is particularly interested in the areas of Intellectual Property Rights, Tax laws and Contracts and aims to work in these fields. Moreover, she is an avid believer that everybody is presumed innocent, until proven guilty, no matter what the charge is."
             />
           </Col>
         </Row>

@@ -1,4 +1,3 @@
-import React,{useState}from "react";
 import { Navbar, Nav, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
@@ -27,8 +26,8 @@ const Header = (props) => {
               <img className="logo" alt="" src={Logo} width="100" />{" "}
             </Navbar.Brand>
             <Nav className="links w-100 d-flex justify-content-between align-items-center">
-              <Nav.Link className="navLinks " href="/">
-                <Link to="/course" className='text-decoration-none text-reset'>Course</Link>
+              <Nav.Link className="navLinks p-0" href="/">
+                <Link to="/course" className='text-decoration-none text-reset p-3'>Course</Link>
               </Nav.Link>
               <Nav.Link className="navLinks" >
                 <Link to="/mock-test" className='text-decoration-none text-reset'>Mock Test</Link>
