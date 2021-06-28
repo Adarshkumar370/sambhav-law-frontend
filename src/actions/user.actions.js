@@ -13,6 +13,7 @@ const userSignup=(user) =>{
         payload:{message},
       });
     }).catch((error)=>{
+      console.log(error);
       dispatch({
         type:userConstant.USER_REGISTER_FALIURE,
         payload:{error:error.response.statusText},

@@ -10,6 +10,9 @@ const Input = (props) => {
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onChange}
+        required={props.req}
+        minLength={props.minLength}
+        maxLength={props.maxLength}
       />
       <Form.Text className="text-muted">{props.errorMessage}</Form.Text>
     </Form.Group>

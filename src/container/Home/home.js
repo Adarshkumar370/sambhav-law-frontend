@@ -33,29 +33,44 @@ const Home = () => {
           >
             <div>
               <h1 className="text-dark" style={{ fontSize: "3.5rem" }}>
-                Join us for the most Comprehensive CLAT PG 2021 Preparation!!
+                Join us for the most Comprehensive CLAT PG 2021 Preparation
               </h1>
-              <p className='mt-4'>
-                <table >
-                  
-                  <tr >
-                    <td className="p-2"><FiCheckCircle className='green'/></td>
-                    <td>Affordable Study Package for extensive preparation</td>
+              <p className="mt-4">
+                <table>
+                  <tr>
+                    <td className="p-2">
+                      <FiCheckCircle className="green" />
+                    </td>
+                    <td>Affordable Study Packages for extensive preparation</td>
                   </tr>
                   <tr>
-                    <td className="p-2"><FiCheckCircle className='green'/></td>
-                    <td>10+ Mocks Tests based on the Latest Pattern (120 Passage Based Questions)</td>
+                    <td className="p-2">
+                      <FiCheckCircle className="green" />
+                    </td>
+                    <td>
+                      12+ Mocks Tests based on the Latest Pattern (120 Passage
+                      Based Questions)
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-2"><FiCheckCircle className='green'/></td>
+                    <td className="p-2">
+                      <FiCheckCircle className="green" />
+                    </td>
                     <td>50+ Detailed Case Law Analysis for Quick Revision</td>
                   </tr>
                   <tr>
-                    <td className="p-2"><FiCheckCircle className='green'/></td>
-                    <td>A List of most Important landmark cases free with each course*</td>
+                    <td className="p-2">
+                      <FiCheckCircle className="green" />
+                    </td>
+                    <td>
+                      A List of most Important landmark cases free with each
+                      course*
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-2"><FiCheckCircle className='green'/></td>
+                    <td className="p-2">
+                      <FiCheckCircle className="green" />
+                    </td>
                     <td>Free Mock Tests and Study Material</td>
                   </tr>
                 </table>
@@ -165,42 +180,43 @@ const Home = () => {
               currentStatus="Enroll Now"
             />
           </Col>
-        </Row> */}<Row className="mt-5 g-5 m-2">
-          <Col>
+        </Row> */}
+        <Row className="mt-5 g-3 gy-5 m-2">
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course1}
-              cardTitle="25 Case Law Summaries + 5 Mock Tests"
-              cardText="This package provides a combination of 25 Most Important, Latest Landmark Case Law summaries that focus on objective portion of the CLAT PG 2021 exam and 5 Extensive Mock Papers with each mock test containing 120 questions based over 12 passages."
-              originalPrice="₹1099"
-              newPrice="₹799"
+              cardTitle="25 Case Law Summaries + 6 Mock Tests"
+              cardText="This package provides a combination of 25 Most Important, Latest Landmark Case Law summaries that focus on objective portion of the CLAT PG 2021 exam and 6 Extensive Mock Papers with each mock test containing 120 questions based over 12 passages."
+              originalPrice="₹999"
+              newPrice="₹659"
               link="/course/clat/course-1"
               currentStatus="Enroll Now"
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course2}
-              cardTitle="5 Mock Tests (Practice Series 1) "
-              cardText="This package provides 5 Extensive Mock Papers based on the latest pattern with each mock test containing 120 question based over 12 passages. These are mock papers are meant for self assessment and the answer key has been provided after every 10 questions."
-              originalPrice="₹699"
-              newPrice="₹449"
+              cardTitle="6 Mock Tests (Practice Series 1) "
+              cardText="This package provides 6 Extensive Mock Papers based on the latest pattern with each mock test containing 120 question based over 12 passages. These are mock papers are meant for self assessment and the answer key has been provided after every 10 questions."
+              originalPrice="₹499"
+              newPrice="₹399"
               link="/course/clat/course-2"
               currentStatus="Enroll Now"
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course3}
               cardTitle="25 Comprehensive Case Law Summaries (Series 1)"
               cardText="This package will provide summaries of 25 Most Important, Latest and Landmark Case Laws that focuses on points important for CLAT PG exam like Related Cases, Key Findings, Relevant Statutes and Amendments."
               originalPrice="₹599"
-              newPrice="₹399"
+              newPrice="₹299"
               link="/course/clat/course-3"
               currentStatus="Enroll Now"
             />
           </Col>
 
-          <Col>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course4}
               cardTitle="3 Case Law Summaries + 2 Mock Tests"
@@ -212,7 +228,7 @@ const Home = () => {
             />
           </Col>
 
-          <Col>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course5}
               cardTitle="All India Mock Test Series (6 Mock Papers) "
@@ -224,7 +240,6 @@ const Home = () => {
             />
           </Col>
         </Row>
-      
       </DisplayCard>
       <br />
       <br />

@@ -11,6 +11,7 @@ const DisplayLink = (props) => {
         className={props.classes}
         onClick={clickHandler}
         to="/course/clat/pdf"
+        target="_blank"
       >
         {props.name}
       </Link>

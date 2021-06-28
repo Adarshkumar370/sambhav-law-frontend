@@ -1,9 +1,13 @@
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Container, Row, Image, Button } from "react-bootstrap";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
 import "./style.css";
-import Course5pic from "../../../assets/course_1.jpg";
+import Course5pic from "../../../assets/course_5.jpg";
 const Course5 = () => {
+  const clickHandler = () => {
+    window.location =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfe5NNBFGE-ohkYQW3HqEAan0gO_1ar4TlDJF_IidsFZHRZdQ/viewform";
+  };
   return (
     <>
       <Header />
@@ -14,6 +18,16 @@ const Course5 = () => {
               src={Course5pic}
               className="img-fluid p-2 img-thumbnail rounded mt-4"
             />
+            <span className="mx-auto">
+              <Button
+                variant="primary"
+                className={`mt-3 ml-3  w-100 p-2 `}
+                onClick={clickHandler}
+              >
+                {" "}
+                Buy Course
+              </Button>
+            </span>
           </Col>
           <Col>
             <h6 className="fw-bold">CLAT</h6>
@@ -27,6 +41,14 @@ const Course5 = () => {
               mock paper. They shall also be provided a separate Rank for each
               individual mock paper as well.
             </p>
+            <Button
+                variant="primary"
+                className="m-3 btn-lg "
+                onClick={clickHandler}
+              >
+                {" "}
+                Buy Course
+              </Button>
             <div className="mt-5 p-3">
               <h2>
                 <span className="underline">REGISTRATION DETAILS:</span>
@@ -52,7 +74,7 @@ const Course5 = () => {
                   along with the link of a Telegram Group, that has to be joined
                   for all the updates regarding the mock test.
                 </li>
-              </ol >
+              </ol>
               <h2>
                 <span className="underline">PAYMENT DETAILS:</span>
               </h2>

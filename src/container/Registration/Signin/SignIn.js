@@ -40,9 +40,9 @@ const Signin = () => {
   return (
     <>
       <Header />
-      <Container className='min-vh-100 mt-5'>
-        <Card style={{ width: "35rem" }} className="m-3 p-2 mx-auto position-absolute top-50 start-50 translate-middle border border-dark border-1 shadow-c ">
-          <h1 class="display-6 m-3 fw-bold">Login</h1>
+      <Container className='min-vh-100 mt-5 '>
+        <Card style={{ width: "25rem" }} className="m-2 p-2 mx-auto  border border-dark border-1 shadow-c ">
+          <h1 class="display-6 m-2 fw-bold">Login</h1>
           <Card.Body>
             <Card.Text>
               
@@ -52,6 +52,7 @@ const Signin = () => {
                   placeholder="Email"
                   value={email}
                   type="email"
+                  req="true"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <Input
@@ -59,6 +60,7 @@ const Signin = () => {
                   placeholder="Password"
                   value={password}
                   type="password"
+                  req="true"
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <br />
@@ -77,7 +79,7 @@ const Signin = () => {
           </Card.Body>
         </Card>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

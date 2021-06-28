@@ -10,6 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const PDFViewer = () => {
   const [file1, setfile] = useState("");
   const [gotoPage, setgotoPage] = useState("1");
+  
   const fileName=localStorage.getItem("pdfLink");
   console.log(fileName);
   useEffect(() => {
@@ -63,7 +64,7 @@ const PDFViewer = () => {
     setPageNumber(numPages);
     setgotoPage(numPages);
   };
-
+ 
   return (
     <>
       <Container fluid>
@@ -106,8 +107,10 @@ const PDFViewer = () => {
           >
             <Document
               file={file1}
+              noData="Loading File Please Wait"
               onLoadSuccess={onDocumentLoadSuccess}
               className="pdf-container"
+              
             >
               <Page pageNumber={pageNumber} />
             </Document>

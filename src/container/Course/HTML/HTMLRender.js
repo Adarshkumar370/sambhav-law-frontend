@@ -7,6 +7,7 @@ import Mock2 from "../../MockTest/CLAT/Mock2";
 import Mock3 from "../../MockTest/CLAT/Mock3";
 import Mock4 from "../../MockTest/CLAT/Mock4";
 import Mock5 from "../../MockTest/CLAT/Mock5";
+import Mock6 from "../../MockTest/CLAT/Mock6";
 
 const HTMLRender = () => {
   const { handle } = useParams();
@@ -29,6 +30,9 @@ const HTMLRender = () => {
           case "Mock5":
           setmock(<Mock5 />);
           break;
+          case "Mock6":
+          setmock(<Mock6 />);
+          break;
         default:
           setmock("404 Not found ");
       }
@@ -42,7 +46,7 @@ const HTMLRender = () => {
     <div>
       <Header />
       <div className='min-vh-100'>{mock}</div>
-      <Footer />
+      
     </div>
   );
 };

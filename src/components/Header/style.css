@@ -1,25 +1,16 @@
-.navBar{
-    height: 100px;
-    background-color: #fff;
+.navBar1{
     box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 3px;
     
 }
-.logo{
-    margin: 10px 0px;
-}
-.navLinks{
-    padding: 50px 30px;
-    
-}
+
+
 .line{
     
     height: 7px;
     background-color:#FFDFFF  ;
     /* background-image: linear-gradient(to right, #7c3186 , #e534a8); */
 }
-.links{
-    
-}
+
 .fbIcon:hover{
     color:blue;
 }

@@ -15,19 +15,19 @@ const MockTest = () => {
           <h1 className="display-5 fw-bold m-2 p-2">Mock courses </h1>
           <hr />
         </Row>
-        <Row className='mt-3 g-5 m-2"'>
-          <Col xs={12} sm={12} md={6} lg={6} xl={3}>
+        <Row className='mt-3 g-3 m-2'>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course2}
-              cardTitle="5 Mock Tests (Practice Series 1) "
-              cardText="This package provides 5 Extensive Mock Papers based on the latest pattern with each mock test containing 120 question based over 12 passages. These are mock papers are meant for self assessment and the answer key has been provided after every 10 questions."
-              originalPrice="₹699"
-              newPrice="₹449"
+              cardTitle="6 Mock Tests (Practice Series 1) "
+              cardText="This package provides 6 Extensive Mock Papers based on the latest pattern with each mock test containing 120 question based over 12 passages. These are mock papers are meant for self assessment and the answer key has been provided after every 10 questions."
+              originalPrice="₹499"
+              newPrice="₹399"
               link="/course/clat/course-2"
               currentStatus="Enroll Now"
             />
           </Col>
-          <Col xs={12} sm={12} md={6} lg={6} xl={3}>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={MockPrevious}
               cardTitle="Previous Year CLAT PG Papers"
@@ -37,7 +37,7 @@ const MockTest = () => {
               currentStatus="Enroll Now"
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course5}
               cardTitle="All India Mock Test Series (6 Mock Papers) "

@@ -8,9 +8,9 @@ import "./style.css";
 import {  useDispatch } from "react-redux";
 import { submitFeedBack } from "../../actions/feedback.actions";
 const Footer = () => {
-  //   useLayoutEffect(() => {
-  //     window.scrollTo(0, 0)
-  // });
+    useLayoutEffect(() => {
+      window.scrollTo(0, 0)
+  });
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ const Footer = () => {
       <Container fluid className="footer">
         <Row className='fs-6'>
           <Col md={{ span: 2, offset: 2 }} className='d-flex flex-column'>
-            <Image src={Logo} width="100%" className="p-1 w-50 mx-auto" />
+            <Image src={Logo}  className="p-3 w-50 mx-auto" />
             <p className='justify mt-3'>
               Sambhav Law is an online platform dedicated towards CLAT LLM/PG
               2021 preparation through comprehensive study material and

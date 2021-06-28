@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 const CardCustom = (props) => {
   return (
-    <Card style={{ width: "25rem", borderRadius: "15px",height:'38rem' }} className="cardFull mh-100">
+    <Card style={{ width: "24rem", borderRadius: "15px",height:'38rem' }} className="cardFull mh-100">
       <Card.Img
         style={{ borderRadius: "15px 15px 0px 0px" }}
         variant="top"

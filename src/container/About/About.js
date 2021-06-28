@@ -89,7 +89,7 @@ const About = () => {
               imgSrc={Founder1}
               Title="Tejas Pandey"
               SubTitle="Founder"
-              Text="Tejas Pandey is the Founder and Chief Creative Head of Sambhav Law Legal E-Learning Platform. He is also a practicing lawyer at Allahabad High Court, Lucknow Bench, with a practice in Civil and Service Matter Disputes. He very passionate about his work and believes in having a strong work ethic. He help out other individuals in pursuit of their career goals, which is also one the chief reasons for the creation of this organization. His area of interests are Constitutional Law, Banking law, Administrative Law."
+              Text="Tejas Pandey is the Founder and Chief Creative Head of Sambhav Law Legal E-Learning Platform. He is also a practicing lawyer at Allahabad High Court, Lucknow Bench, with a practice in Civil and Service Matter Disputes. He is very passionate about his work and believes in having a strong work ethic. He wants to help out other individuals in pursuit of their career goals, which is also one the chief reasons for the creation of this organization. His areas of interests are Constitutional Law, Banking law, Administrative Law."
             />
           </Col>
           <Col md={{ span: 4 }}>
@@ -108,7 +108,7 @@ const About = () => {
             <h5 className=" team">Team</h5>
           </span>
           <h1 className="text-center">Our Team</h1>
-          <Col >
+          <Col md={{ span: 4, offset: 2 }} >
             <UserCard
               width="22rem"
               imgSrc={Karina}
@@ -117,7 +117,7 @@ const About = () => {
               Text="Karina is a 4th year BBALLB student of Kristu Jayanti College of Law, Bangalore with experience in drafting, mediation and legal research. She is particularly interested in the areas of Intellectual Property Rights, Tax laws and Contracts and aims to work in these fields. Moreover, she is an avid believer that everybody is presumed innocent, until proven guilty, no matter what the charge is."
             />
           </Col>
-          <Col >
+          <Col md={{ span: 4 }} >
             <UserCard
               width="22rem"
               imgSrc={Vidisha}
@@ -127,7 +127,7 @@ const About = () => {
               Vidisha is a 3rd year law student of KIIT School of Law, Odisha. She has a keen interest in the areas of Constitutional Law and Company Law and aspires to become a Company Secretary."
             />
           </Col>
-          <Col >
+          <Col md={{ span: 4, offset: 2 }}  >
             <UserCard
               width="22rem"
               imgSrc={Ria}

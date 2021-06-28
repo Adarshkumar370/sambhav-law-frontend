@@ -2,7 +2,7 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
 import "./style.css";
-import Course5pic from "../../../assets/course_1.jpg";
+import Course5pic from "../../../assets/course_4.png";
 import DisplayLink from "../../../components/UI/DisplayLink/DisplayLink";
 const Course4 = () => {
   return (

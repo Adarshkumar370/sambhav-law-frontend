@@ -3,12 +3,13 @@ import { Col, Container, Row, Button, Image } from "react-bootstrap";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
 import "./style.css";
-import Course3pic from "../../../assets/course_3.png";
-import { Link } from "react-router-dom";
+import Course1pic from "../../../assets/course_1.jpg";
+import { Link, Redirect } from "react-router-dom";
 import DisplayLink from "../../../components/UI/DisplayLink/DisplayLink";
 const Course1 = () => {
   const [linkClass, setLinkClass] = useState("d-none");
   const [buttons, setButtons] = useState("");
+  const [temp, settemp] = useState(0);
   const course = JSON.parse(localStorage.getItem("purchaseList"));
   useEffect(() => {
     for (const key in course) {
@@ -16,55 +17,67 @@ const Course1 = () => {
         const element = course[key];
         if (element.courseId === "course-1") {
           setLinkClass("");
-          localStorage.setItem('mock-sto',"checkMock");
+          localStorage.setItem("mock-sto", "checkMock");
         }
       }
     }
     if (linkClass === "") setButtons("d-none");
   });
-
+  const clickHandler = () => {
+    if (localStorage.getItem("user"))
+      window.location =
+        "https://docs.google.com/forms/d/e/1FAIpQLSeFECpioXTtesZvr1qozdPAL_zJrfEXIyoPd5mMtq9_dwF92Q/viewform";
+    else window.location.href = "/signup";
+  };
   return (
     <>
       <Header />
-      <Container fluid className="mt-4">
+      <Container className="mt-4 mx-auto">
         <Row>
-          <Col sm={{ span: 3 }} className="">
+          <Col sm={{ span: 4 }} className="">
             <Image
-              src={Course3pic}
+              src={Course1pic}
               className="img-fluid p-2 img-thumbnail rounded mt-4"
             />
             <span className="mx-auto">
               <Button
                 variant="primary"
                 className={`mt-3 ml-3  w-100 p-2 ${buttons}`}
+                onClick={clickHandler}
               >
                 {" "}
                 Buy Course
               </Button>
             </span>
-            <p>For any queries regarding the study material including any questions or objections, Contact us on: inquirysambhavlaw@gmail.com</p>
+            <p>
+              For any queries regarding the study material including any
+              questions or objections, Contact us on:
+              inquirysambhavlaw@gmail.com
+            </p>
           </Col>
           <Col>
             <h6 className="fw-bold">CLAT</h6>
-            <h1 className="mt-3 p-2">25 Case Law Summaries + 5 Mock Tests</h1>
+            <h1 className="mt-3 p-2">25 Case Law Summaries + 6 Mock Tests</h1>
             <p className="justify p-2">
               This package will provide a combination of 25 Most Important,
               Latest and Landmark Case Law summaries that focus on the most
               important points for the objective portion of the CLAT PG 2021
-              exam and 5 Extensive Mock Papers based on the latest CLAT PG 2021
+              exam and 6 Extensive Mock Papers based on the latest CLAT PG 2021
               format with each mock test containing 120 question based over 12
-              passages.
+              passages. This package also contains a LIST of the LATEST LANDMARK
+              CASES that are IMPORTANT FOR CLAT PG 2021 EXAM.
             </p>
             <span className={`"mt-5 p-2" ${buttons}`}>
               <b className="price">Price:</b>
-              <span className="oldPrice"> ₹899</span>{" "}
-              <span className="newPrice">₹499</span>
-              <Link to="/buy-course/course3">
-                <Button variant="primary" className="m-3 btn-lg ">
-                  {" "}
-                  Buy Course
-                </Button>
-              </Link>
+              <span className="oldPrice"> ₹999</span>{" "}
+              <span className="newPrice">₹659</span>
+              <Button
+                variant="primary"
+                className="m-3 btn-lg "
+                onClick={clickHandler}
+              >
+                Buy Course
+              </Button>
             </span>{" "}
             <div className="mt-5 p-3">
               <h2>
@@ -72,19 +85,12 @@ const Course1 = () => {
               </h2>
 
               <p className="justify mt-5">
-                Are you worried about how you would perpare your The CLAT PG
-                paper. So many case laws, foundational subjects, a confusing
-                pattern. How do I manage it? Don’t worry as we bring for you the
-                most extensive CLAT PG study package that solves the problem of
-                hunting for Important Case Laws online and thinking twice about
-                buying costly study packages that don’t include mock tests and
-                study materials combined. This study package contains both study
-                material and mock test that will enable extensive preparation at
-                your part at the most effective price. It contains the best of
-                both worlds with with 25 comprehensive case law summaries that
-                are based on the recent landmark cases. The summaries emphasize
-                on important points for over which the objctive questions can be
-                formed such as:
+                This study package contains both study material and mock test
+                that will enable extensive preparation at your part at the most
+                effective price. It contains the best of both worlds with with
+                25 comprehensive case law summaries that are based on the recent
+                landmark cases. The summaries emphasize on important points for
+                over which the objective questions can be formed such as:
               </p>
 
               <ul>
@@ -96,7 +102,7 @@ const Course1 = () => {
               </ul>
 
               <p className="justify">
-                Further it also contains 5 Extensive Mock Papers based on the
+                Further it also contains 6 Extensive Mock Papers based on the
                 latest CLAT PG 2021 format with each mock test containing 120
                 question based over 12 passages.
               </p>
@@ -355,46 +361,62 @@ const Course1 = () => {
 
               <hr />
               <div className={linkClass}>
-                <h3><b>Mock Test</b></h3>
-              <DisplayLink
+                <h3>
+                  <b>Mock Test</b>
+                </h3>
+                <DisplayLink
                   name="Mock Test-1"
                   file="mock1"
                   classes={linkClass}
-                  
                 />
                 <DisplayLink
                   name="Mock Test-2"
                   file="mock2"
                   classes={linkClass}
-                  
                 />
                 <DisplayLink
                   name="Mock Test-3"
                   file="mock3"
                   classes={linkClass}
-                  
                 />
                 <DisplayLink
                   name="Mock Test-4"
                   file="mock4"
                   classes={linkClass}
-                  
                 />
                 <DisplayLink
                   name="Mock Test-5"
                   file="mock5"
                   classes={linkClass}
-                  
+                />
+                <DisplayLink
+                  name="Mock Test-6"
+                  file="mock6"
+                  classes={linkClass}
                 />
               </div>
               <div className={linkClass}>
-                
-              <h3><b>Mock Test (Mobile Friendly)</b></h3>
-              <Link to='/mock/Mock1'><p>Mock Test-1</p></Link>
-              <Link to='/mock/Mock2'><p>Mock Test-2</p></Link>
-              <Link to='/mock/Mock3'><p>Mock Test-3</p></Link>
-              <Link to='/mock/Mock4'><p>Mock Test-4</p></Link>
-              <Link to='/mock/Mock5'><p>Mock Test-5</p></Link>
+                <h3>
+                  <b>Mock Test (Mobile Friendly)</b>
+                </h3>
+                <Link to="/mock/Mock1">
+                  <p>Mock Test-1</p>
+                </Link>
+                <Link to="/mock/Mock2">
+                  <p>Mock Test-2</p>
+                </Link>
+                <Link to="/mock/Mock3">
+                  <p>Mock Test-3</p>
+                </Link>
+                <Link to="/mock/Mock4">
+                  <p>Mock Test-4</p>
+                </Link>
+                <Link to="/mock/Mock5">
+                  <p>Mock Test-5</p>
+                </Link>
+                <Link to="/mock/Mock6">
+                  <p>Mock Test-6</p>
+                </Link>
               </div>
             </div>
           </Col>

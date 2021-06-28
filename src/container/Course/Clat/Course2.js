@@ -3,7 +3,7 @@ import { Col, Container, Row, Button, Image } from "react-bootstrap";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
 import "./style.css";
-import Course3pic from "../../../assets/course_3.png";
+import Course2pic from "../../../assets/course_2.jpg";
 import { Link } from "react-router-dom";
 import DisplayLink from "../../../components/UI/DisplayLink/DisplayLink";
 const Course2 = () => {
@@ -23,7 +23,12 @@ const Course2 = () => {
     }
     if (linkClass === "") setButtons("d-none");
   });
-
+  const clickHandler = () => {
+    if (localStorage.getItem("user"))
+      window.location =
+        "https://docs.google.com/forms/d/e/1FAIpQLSfyaZBIgP5BRnbihBacL9Jt2qpMqp8G5QMgHSLYKvXNKBi9Xg/viewform";
+    else window.location.href = "/signup";
+  };
   return (
     <>
       <Header />
@@ -31,40 +36,48 @@ const Course2 = () => {
         <Row>
           <Col sm={{ span: 3 }} className="">
             <Image
-              src={Course3pic}
+              src={Course2pic}
               className="img-fluid p-2 img-thumbnail rounded mt-4"
             />
             <span className="mx-auto">
               <Button
                 variant="primary"
                 className={`mt-3 ml-3  w-100 p-2 ${buttons}`}
+                onClick={clickHandler}
               >
                 {" "}
                 Buy Course
               </Button>
             </span>
+            <p className="m-2 justify  mt-3 ">
+              For any queries regarding the study material including any
+              questions or objections, Contact us on:
+              inquirysambhavlaw@gmail.com
+            </p>
           </Col>
           <Col>
             <h6 className="fw-bold">CLAT</h6>
-            <h1 className="mt-3 p-2">5 Mock Tests (Practice Series 1)</h1>
+            <h1 className="mt-3 p-2">6 Mock Tests (Practice Series 1)</h1>
             <p className="justify p-2">
-              This package will provide a combination of 25 Most Important,
-              Latest and Landmark Case Law summaries that focus on the most
-              important points for the objective portion of the CLAT PG 2021
-              exam and 5 Extensive Mock Papers based on the latest CLAT PG 2021
-              format with each mock test containing 120 question based over 12
-              passages.
+              This package provides 6 Extensive Mock Papers based on the latest
+              pattern with each mock test containing 120 question based over 12
+              passages. These are mock papers are meant for self assessment and
+              the answer key has been provided after every 10 questions. This
+              package also contains a LIST of the LATEST LANDMARK CASES that are
+              IMPORTANT FOR CLAT PG 2021 EXAM.
             </p>
             <span className={`"mt-5 p-2" ${buttons}`}>
               <b className="price">Price:</b>
-              <span className="oldPrice"> ₹899</span>{" "}
-              <span className="newPrice">₹499</span>
-              <Link to="/buy-course/course3">
-                <Button variant="primary" className="m-3 btn-lg ">
-                  {" "}
-                  Buy Course
-                </Button>
-              </Link>
+              <span className="oldPrice"> ₹499</span>{" "}
+              <span className="newPrice">₹399</span>
+              <Button
+                variant="primary"
+                className="m-3 btn-lg "
+                onClick={clickHandler}
+              >
+                {" "}
+                Buy Course
+              </Button>
             </span>{" "}
             <div className="mt-5 p-3">
               <h2>
@@ -76,7 +89,7 @@ const Course2 = () => {
                 with the introduction of paragraph based questions that also
                 require you to study recent case along with the usual
                 foundational subjects. Hence here we are with the most
-                affordable Mock Test Series on CLAT PG with more than 5 Mock
+                affordable Mock Test Series on CLAT PG with more than 6 Mock
                 Tests with each mock test containing 120 question based over 12
                 passages are based as according to the CLAT PG 2021 paper
                 format.
