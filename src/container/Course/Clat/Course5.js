@@ -28,6 +28,11 @@ const Course5 = () => {
                 Buy Course
               </Button>
             </span>
+            <p className="m-2 justify  mt-3 ">
+              For any queries regarding the study material including any
+              questions or objections, Contact us on:
+              inquirysambhavlaw@gmail.com
+            </p>
           </Col>
           <Col>
             <h6 className="fw-bold">CLAT</h6>

@@ -15,6 +15,11 @@ const Course4 = () => {
               src={Course5pic}
               className="img-fluid p-2 img-thumbnail rounded mt-4"
             />
+            <p className="m-2 justify  mt-3 ">
+              For any queries regarding the study material including any
+              questions or objections, Contact us on:
+              inquirysambhavlaw@gmail.com
+            </p>
           </Col>
           <Col>
             <h6 className="fw-bold">CLAT</h6>
@@ -22,7 +27,8 @@ const Course4 = () => {
             <p className="justify p-2">
               This package will provide a combination of 3 Landmark Case Law
               summaries that focus on the points important for the CLAT exam and
-              2 Free Extensive Mock Papers based on the current pattern.
+              2 Free Extensive Mock Papers based on the current pattern.<br/>
+              <b> Registration is required to view the Course Material</b>
             </p>
             <div className="mt-5 p-3">
               <h2>

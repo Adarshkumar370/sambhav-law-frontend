@@ -67,7 +67,7 @@ const Course2 = () => {
               IMPORTANT FOR CLAT PG 2021 EXAM.
             </p>
             <span className={`"mt-5 p-2" ${buttons}`}>
-              <b className="price">Price:</b>
+            <b className="price text-danger"> Special Launch Price:</b>
               <span className="oldPrice"> ₹499</span>{" "}
               <span className="newPrice">₹399</span>
               <Button

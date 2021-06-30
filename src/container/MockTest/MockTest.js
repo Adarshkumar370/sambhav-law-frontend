@@ -41,7 +41,7 @@ const MockTest = () => {
             <CardCustom
               cardPic={Course5}
               cardTitle="All India Mock Test Series (6 Mock Papers) "
-              cardText="This mock test series is based upon ALL INDIA CONSOLIDATED RANKING SYSTEM that lets the participants receive a Consolidated Rank after averaging out their marks in each mock paper. They shall also receive a separate Rank for each individual mock paper as well."
+              cardText="This package aims to provide a Consolidated Rank by providing an imitation of the actual CLAT exam through 6 mock tests conducted on 5-day intervals. Note: It contains different mock papers from the 6 Practice Mock Test Series."
               newPrice="₹399"
               link="/course/clat/course-5"
               currentStatus="Enroll Now"

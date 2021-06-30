@@ -45,6 +45,11 @@ const Course3 = () => {
                 Buy Course
               </Button>
             </span>
+            <p className="m-2 justify  mt-3 ">
+              For any queries regarding the study material including any
+              questions or objections, Contact us on:
+              inquirysambhavlaw@gmail.com
+            </p>
           </Col>
           <Col>
             <h6 className="fw-bold">CLAT</h6>
@@ -57,9 +62,9 @@ const Course3 = () => {
               LANDMARK CASES that are IMPORTANT FOR CLAT PG 2021 EXAM.
             </p>
             <span className={`"mt-5 p-2" ${buttons}`}>
-              <b className="price">Price:</b>
+            <b className="price text-danger"> Special Launch Price:</b>
               <span className="oldPrice"> ₹599</span>{" "}
-              <span className="newPrice">₹299</span>
+              <span className="newPrice">₹399</span>
               <Button
                 variant="primary"
                 className="m-3 btn-lg "

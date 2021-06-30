@@ -24,6 +24,9 @@ import BuyCourse from "./container/BuyCourse/BuyCourse";
 import PDFViewer from './container/Course/PDF/PDFRender';
 import Previous from "./container/MockTest/CLAT/Previous";
 import HTMLRender from "./container/Course/HTML/HTMLRender";
+import DummyLink1 from "./container/Course/HTML/DummyLink1";
+import DummyLink2 from "./container/Course/HTML/DummyLink2";
+
 function App() {
   
   return (
@@ -57,6 +60,8 @@ function App() {
         <Route path ='/course/clat/pdf' component={PDFViewer}/>
         <Route path ='/mock/previous' component={Previous}/>
         <Route path='/mock/:handle' component={HTMLRender}/>
+        <Route path="/dummyLink2" component={DummyLink1}/>
+        <Route path="/dummyLink1" component={DummyLink2}/>
       </Switch>
     </>
   );

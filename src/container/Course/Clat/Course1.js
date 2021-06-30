@@ -47,7 +47,7 @@ const Course1 = () => {
               >
                 {" "}
                 Buy Course
-              </Button>
+              </Button><span className=''></span>
             </span>
             <p>
               For any queries regarding the study material including any
@@ -67,8 +67,9 @@ const Course1 = () => {
               passages. This package also contains a LIST of the LATEST LANDMARK
               CASES that are IMPORTANT FOR CLAT PG 2021 EXAM.
             </p>
+            
             <span className={`"mt-5 p-2" ${buttons}`}>
-              <b className="price">Price:</b>
+              <b className="price text-danger"> Special Launch Price:</b>
               <span className="oldPrice"> ₹999</span>{" "}
               <span className="newPrice">₹659</span>
               <Button

@@ -8,7 +8,6 @@ import Course2 from "../../assets/course_2.jpg";
 import Course3 from "../../assets/course_3.png";
 import Course4 from "../../assets/course_4.png";
 import Course5 from "../../assets/course_5.jpg";
-
 const Course = () => {
   return (
     <>
@@ -19,13 +18,17 @@ const Course = () => {
             <h1 class="display-5 fw-bold m-2 p-2">Our Courses </h1>
           </Col>
           <hr />
+          <p className='m-3 p-3'>
+            In case of any doubts regarding our courses, refer to the FAQs by
+            scrolling down on this page.
+          </p>
         </Row>
         <Row className="mt-5 g-3 m-2 gy-5">
           <Col xs={12} sm={12} md={6} lg={6} xl={4}>
             <CardCustom
               cardPic={Course1}
               cardTitle="25 Case Law Summaries + 6 Mock Tests"
-              cardText="This package provides a combination of 25 Most Important, Latest Landmark Case Law summaries that focus on objective portion of the CLAT PG 2021 exam and 6 Extensive Mock Papers with each mock test containing 120 questions based over 12 passages."
+              cardText="This package is a combination of the 25 Comprehensive Case Law Summaries package and the 6 Practice Mock Tests package. It contains 25 Case Law Digest on Latest Landmark Cases for a quick revision and 6 Practice Mock Papers containing 120 passage-based questions."
               originalPrice="₹999"
               newPrice="₹659"
               link="/course/clat/course-1"
@@ -49,7 +52,7 @@ const Course = () => {
               cardTitle="25 Comprehensive Case Law Summaries (Series 1)"
               cardText="This package will provide summaries of 25 Most Important, Latest and Landmark Case Laws that focuses on points important for CLAT PG exam like Related Cases, Key Findings, Relevant Statutes and Amendments."
               originalPrice="₹599"
-              newPrice="₹299"
+              newPrice="₹399"
               link="/course/clat/course-3"
               currentStatus="Enroll Now"
             />
@@ -71,7 +74,7 @@ const Course = () => {
             <CardCustom
               cardPic={Course5}
               cardTitle="All India Mock Test Series (6 Mock Papers) "
-              cardText="This mock test series is based upon ALL INDIA CONSOLIDATED RANKING SYSTEM that lets the participants receive a Consolidated Rank after averaging out their marks in each mock paper. They shall also receive a separate Rank for each individual mock paper as well."
+              cardText="This package aims to provide a Consolidated Rank by providing an imitation of the actual CLAT exam through 6 mock tests conducted on 5-day intervals. Note: It contains different mock papers from the 6 Practice Mock Test Series."
               newPrice="₹399"
               link="/course/clat/course-5"
               currentStatus="Enroll Now"
@@ -79,7 +82,81 @@ const Course = () => {
             />
           </Col>
         </Row>
-      </Container><br/>
+        <br />
+        <Row>
+          <h2>
+            <span className="underline m-2 mt-5">
+              Frequently Asked Questions
+            </span>
+          </h2>
+          <div className="mt-4 m-2 p-3 mb-5 me-5">
+            <li className='mt-4'>
+              <b>
+                Are the Case Summaries and Mock Tests provided in the{" "}
+                <span className="text-primary">
+                  25 Case Law Summaries + 6 Mock Tests Package{" "}
+                </span>{" "}
+                similar to the{" "}
+                <span className="text-primary">
+                  6 Mock Tests (Practice Series 1) Package{" "}
+                </span>{" "}
+                and{" "}
+                <span className="text-primary">
+                  25 Comprehensive Case Law Summaries (Series 1) Package
+                </span>
+                ?
+              </b>
+            </li>
+            <p className='mt-2'>
+              The 25 Case Law Summaries + 6 Mock Tests Package is a combination
+              of the 25 Comprehensive Case Law Summaries package and the 6
+              Practice Mock Tests package, provided as BUNDLE PACK on a
+              discounted price.
+            </p>
+            <li className='mt-4'>
+              <b>
+                Are the Mock Tests present in{" "}
+                <span className="text-primary">
+                  6 Mock Tests (Practice Series 1)
+                </span>
+                Package similar to the{" "}
+                <span className="text-primary">
+                  All India Mock Test Series (6 Mock Papers)
+                </span>{" "}
+                Package?
+              </b>
+            </li>
+            <p className='mt-2'>
+              No, the mock papers present in the 6 Mock Tests (Practice Series
+              1) are totally different from the All India Mock Test Series (6
+              Mock Papers) Package.
+            </p>
+            <li className='mt-4'>
+              <b>
+                What is the nature of the mock tests present in the{" "}
+                <span className="text-primary">
+                  6 Mock Tests (Practice Series 1)
+                </span>{" "}
+                and the{" "}
+                <span className="text-primary">
+                  All India Mock Test Series (6 Mock Papers)
+                </span>{" "}
+                Package?
+              </b>
+            </li>
+            <p className='mt-2'>
+              The mock tests provided in the 6 Mock Tests (Practice Series 1)
+              Package are available on the website for self-evaluation whereas
+              the mock papers available in the All-India Mock Test Series (6
+              Mock Papers) Package are to held on 5-day intervals starting from
+              25th June, 2021 onwards. Ranking for all the mock tests held shall
+              be provided using separate test links, including for the papers
+              already conducted before registration.
+            </p>
+          </div>
+        </Row>
+      </Container>
+      <br />
       <Footer />
     </>
   );

@@ -48,7 +48,7 @@ const Home = () => {
                       <FiCheckCircle className="green" />
                     </td>
                     <td>
-                      12+ Mocks Tests based on the Latest Pattern (120 Passage
+                      6+ Mocks Tests based on the Latest Pattern (120 Passage
                       Based Questions)
                     </td>
                   </tr>
@@ -56,7 +56,7 @@ const Home = () => {
                     <td className="p-2">
                       <FiCheckCircle className="green" />
                     </td>
-                    <td>50+ Detailed Case Law Analysis for Quick Revision</td>
+                    <td>25+ Detailed Case Law Analysis for Quick Revision</td>
                   </tr>
                   <tr>
                     <td className="p-2">
@@ -186,7 +186,7 @@ const Home = () => {
             <CardCustom
               cardPic={Course1}
               cardTitle="25 Case Law Summaries + 6 Mock Tests"
-              cardText="This package provides a combination of 25 Most Important, Latest Landmark Case Law summaries that focus on objective portion of the CLAT PG 2021 exam and 6 Extensive Mock Papers with each mock test containing 120 questions based over 12 passages."
+              cardText="This package is a combination of the 25 Comprehensive Case Law Summaries package and the 6 Practice Mock Tests package. It contains 25 Case Law Digest on Latest Landmark Cases for a quick revision and 6 Practice Mock Papers containing 120 passage-based questions."
               originalPrice="₹999"
               newPrice="₹659"
               link="/course/clat/course-1"
@@ -210,7 +210,7 @@ const Home = () => {
               cardTitle="25 Comprehensive Case Law Summaries (Series 1)"
               cardText="This package will provide summaries of 25 Most Important, Latest and Landmark Case Laws that focuses on points important for CLAT PG exam like Related Cases, Key Findings, Relevant Statutes and Amendments."
               originalPrice="₹599"
-              newPrice="₹299"
+              newPrice="₹399"
               link="/course/clat/course-3"
               currentStatus="Enroll Now"
             />
@@ -232,7 +232,7 @@ const Home = () => {
             <CardCustom
               cardPic={Course5}
               cardTitle="All India Mock Test Series (6 Mock Papers) "
-              cardText="This mock test series is based upon ALL INDIA CONSOLIDATED RANKING SYSTEM that lets the participants receive a Consolidated Rank after averaging out their marks in each mock paper. They shall also receive a separate Rank for each individual mock paper as well."
+              cardText="This package aims to provide a Consolidated Rank by providing an imitation of the actual CLAT exam through 6 mock tests conducted on 5-day intervals. Note: It contains different mock papers from the 6 Practice Mock Test Series."
               newPrice="₹399"
               link="/course/clat/course-5"
               currentStatus="Enroll Now"
